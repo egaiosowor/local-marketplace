@@ -10,7 +10,7 @@ const config = {
   singleQuote: false,
   tabWidth: 2,
   trailingComma: "es5",
-  endOfLine: "crlf",
+  endOfLine: "auto",
   plugins: ["prettier-plugin-tailwindcss"],
 };
 
