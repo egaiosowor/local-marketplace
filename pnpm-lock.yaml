@@ -62,9 +62,18 @@ importers:
       eslint-plugin-prettier:
         specifier: ^5.4.1
         version: 5.4.1(eslint-config-prettier@10.1.5(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))(prettier@3.5.3)
+      install:
+        specifier: ^0.13.0
+        version: 0.13.0
+      npm:
+        specifier: ^11.4.1
+        version: 11.4.1
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
+      prettier-plugin-tailwindcss:
+        specifier: ^0.6.12
+        version: 0.6.12(prettier@3.5.3)
       tailwindcss:
         specifier: ^4
         version: 4.1.8
@@ -1935,6 +1944,13 @@ packages:
       }
     engines: { node: ">=0.8.19" }
 
+  install@0.13.0:
+    resolution:
+      {
+        integrity: sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==,
+      }
+    engines: { node: ">= 0.10" }
+
   internal-slot@1.1.0:
     resolution:
       {
@@ -2485,6 +2501,81 @@ packages:
       sass:
         optional: true
 
+  npm@11.4.1:
+    resolution:
+      {
+        integrity: sha512-/O5DiEFmtvnF0EU1+5VlDpcItpSKH3l+3fQOl3hkZ3ilGN+jJlGxxi/zb0rEK+zxd8pGyifVPyS1ORkMjZGAKw==,
+      }
+    engines: { node: ^20.17.0 || >=22.9.0 }
+    hasBin: true
+    bundledDependencies:
+      - "@isaacs/string-locale-compare"
+      - "@npmcli/arborist"
+      - "@npmcli/config"
+      - "@npmcli/fs"
+      - "@npmcli/map-workspaces"
+      - "@npmcli/package-json"
+      - "@npmcli/promise-spawn"
+      - "@npmcli/redact"
+      - "@npmcli/run-script"
+      - "@sigstore/tuf"
+      - abbrev
+      - archy
+      - cacache
+      - chalk
+      - ci-info
+      - cli-columns
+      - fastest-levenshtein
+      - fs-minipass
+      - glob
+      - graceful-fs
+      - hosted-git-info
+      - ini
+      - init-package-json
+      - is-cidr
+      - json-parse-even-better-errors
+      - libnpmaccess
+      - libnpmdiff
+      - libnpmexec
+      - libnpmfund
+      - libnpmorg
+      - libnpmpack
+      - libnpmpublish
+      - libnpmsearch
+      - libnpmteam
+      - libnpmversion
+      - make-fetch-happen
+      - minimatch
+      - minipass
+      - minipass-pipeline
+      - ms
+      - node-gyp
+      - nopt
+      - normalize-package-data
+      - npm-audit-report
+      - npm-install-checks
+      - npm-package-arg
+      - npm-pick-manifest
+      - npm-profile
+      - npm-registry-fetch
+      - npm-user-validate
+      - p-map
+      - pacote
+      - parse-conflict-json
+      - proc-log
+      - qrcode-terminal
+      - read
+      - semver
+      - spdx-expression-parse
+      - ssri
+      - supports-color
+      - tar
+      - text-table
+      - tiny-relative-date
+      - treeverse
+      - validate-npm-package-name
+      - which
+
   object-assign@4.1.1:
     resolution:
       {
@@ -2650,6 +2741,64 @@ packages:
         integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==,
       }
     engines: { node: ">=6.0.0" }
+
+  prettier-plugin-tailwindcss@0.6.12:
+    resolution:
+      {
+        integrity: sha512-OuTQKoqNwV7RnxTPwXWzOFXy6Jc4z8oeRZYGuMpRyG3WbuR3jjXdQFK8qFBMBx8UHWdHrddARz2fgUenild6aw==,
+      }
+    engines: { node: ">=14.21.3" }
+    peerDependencies:
+      "@ianvs/prettier-plugin-sort-imports": "*"
+      "@prettier/plugin-pug": "*"
+      "@shopify/prettier-plugin-liquid": "*"
+      "@trivago/prettier-plugin-sort-imports": "*"
+      "@zackad/prettier-plugin-twig": "*"
+      prettier: ^3.0
+      prettier-plugin-astro: "*"
+      prettier-plugin-css-order: "*"
+      prettier-plugin-import-sort: "*"
+      prettier-plugin-jsdoc: "*"
+      prettier-plugin-marko: "*"
+      prettier-plugin-multiline-arrays: "*"
+      prettier-plugin-organize-attributes: "*"
+      prettier-plugin-organize-imports: "*"
+      prettier-plugin-sort-imports: "*"
+      prettier-plugin-style-order: "*"
+      prettier-plugin-svelte: "*"
+    peerDependenciesMeta:
+      "@ianvs/prettier-plugin-sort-imports":
+        optional: true
+      "@prettier/plugin-pug":
+        optional: true
+      "@shopify/prettier-plugin-liquid":
+        optional: true
+      "@trivago/prettier-plugin-sort-imports":
+        optional: true
+      "@zackad/prettier-plugin-twig":
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-multiline-arrays:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-sort-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
 
   prettier@3.5.3:
     resolution:
@@ -4408,6 +4557,8 @@ snapshots:
 
   imurmurhash@0.1.4: {}
 
+  install@0.13.0: {}
+
   internal-slot@1.1.0:
     dependencies:
       es-errors: 1.3.0
@@ -4710,6 +4861,8 @@ snapshots:
       - "@babel/core"
       - babel-plugin-macros
 
+  npm@11.4.1: {}
+
   object-assign@4.1.1: {}
 
   object-inspect@1.13.4: {}
@@ -4810,6 +4963,10 @@ snapshots:
   prettier-linter-helpers@1.0.0:
     dependencies:
       fast-diff: 1.3.0
+
+  prettier-plugin-tailwindcss@0.6.12(prettier@3.5.3):
+    dependencies:
+      prettier: 3.5.3
 
   prettier@3.5.3: {}
 

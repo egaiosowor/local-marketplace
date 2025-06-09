@@ -7,35 +7,35 @@ import { getTimeAgo } from "@/app/lib/formatters";
 export function ListingCard({ listing }: { listing: Listing }) {
   const { title, price, image, createdAt, location } = listing;
   return (
-    <div className="w-full flex flex-col gap-2 bg-white rounded-2xl overflow-clip">
-      <div className="relative w-full aspect-[2/1]">
+    <div className="flex w-full flex-col gap-2 overflow-clip rounded-2xl bg-white">
+      <div className="relative aspect-[2/1] w-full">
         <Image src={image} alt={title} fill className="object-cover" />
-        <div className="absolute top-4 right-4 flex items-center gap-1 p-1 text-xs bg-white rounded-md leading-tight">
+        <div className="absolute top-4 right-4 flex items-center gap-1 rounded-md bg-white p-1 text-xs leading-tight">
           <Star size={12} className="" />
           4.5
         </div>
       </div>
-      <div className="p-4 flex items-start justify-between">
+      <div className="flex items-start justify-between p-4">
         <div className="flex flex-col gap-2">
-          <h3 className="sm:text-lg leading-tight">{title}</h3>
-          <p className="font-semibold leading-tight">${price}</p>
+          <h3 className="leading-tight sm:text-lg">{title}</h3>
+          <p className="leading-tight font-semibold">${price}</p>
           <div className="flex items-center gap-2">
-            <p className="flex items-center  gap-0.5 text-xs text-gray-500">
+            <p className="flex items-center gap-0.5 text-xs text-gray-500">
               <Clock size="12" className="text-black/70" />
               {getTimeAgo(createdAt)}
             </p>
-            <Dot className="size-1 text-black/10 bg-black/10 rounded-full" />
-            <p className="flex items-center  gap-0.5 text-xs text-gray-500">
+            <Dot className="size-1 rounded-full bg-black/10 text-black/10" />
+            <p className="flex items-center gap-0.5 text-xs text-gray-500">
               <MapPin size="12" className="text-black/70" />
               {location}
             </p>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button className="p-2 rounded-full border border-gray-100">
+          <button className="rounded-full border border-gray-100 p-2">
             <Heart className="size-4 text-gray-500" />
           </button>
-          <button className="p-2 rounded-full border border-gray-100">
+          <button className="rounded-full border border-gray-100 p-2">
             <Bookmark className="size-4 text-gray-500" />
           </button>
         </div>
