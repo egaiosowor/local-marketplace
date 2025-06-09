@@ -1,10 +1,17 @@
 /** @type {import("prettier").Config} */
+
 const config = {
-  semi: true,
-  tabWidth: 2,
-  singleQuote: false,
-  trailingComma: "es5",
+  arrowParens: "always",
+  bracketSpacing: true,
+  bracketSameLine: false,
+  jsxSingleQuote: false,
   printWidth: 80,
+  semi: true,
+  singleQuote: false,
+  tabWidth: 2,
+  trailingComma: "es5",
+  endOfLine: "crlf",
+  plugins: ["prettier-plugin-tailwindcss"],
 };
 
 export default config;
