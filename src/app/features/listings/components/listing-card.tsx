@@ -10,8 +10,8 @@ export function ListingCard({ listing }: { listing: Listing }) {
     <div className="flex w-full flex-col gap-2 overflow-clip rounded-2xl bg-white">
       <div className="relative aspect-[2/1] w-full">
         <Image src={image} alt={title} fill className="object-cover" />
-        <div className="absolute top-4 right-4 flex items-center gap-1 rounded-md bg-white p-1 text-xs leading-tight">
-          <Star size={12} className="" />
+        <div className="absolute top-4 right-4 flex items-center gap-1 rounded-md bg-white p-1 text-xs leading-[0]">
+          <Star size={14} className="fill-yellow-400 text-transparent" />
           4.5
         </div>
       </div>
@@ -32,11 +32,11 @@ export function ListingCard({ listing }: { listing: Listing }) {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button className="rounded-full border border-gray-100 p-2">
-            <Heart className="size-4 text-gray-500" />
+          <button className="group cursor-pointer rounded-full border border-gray-100 p-2">
+            <Heart className="size-4 text-gray-500 transition-colors duration-300 ease-in group-hover:fill-red-500 group-hover:text-red-500" />
           </button>
-          <button className="rounded-full border border-gray-100 p-2">
-            <Bookmark className="size-4 text-gray-500" />
+          <button className="group cursor-pointer rounded-full border border-gray-100 p-2">
+            <Bookmark className="size-4 text-gray-800 transition-colors duration-300 ease-in group-hover:fill-gray-800" />
           </button>
         </div>
       </div>
