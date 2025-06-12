@@ -1,11 +1,17 @@
 import Link from "next/link";
-import { Bell, MessageCircle, Search, ChevronDown } from "lucide-react";
+import {
+  Bell,
+  Search,
+  ChevronDown,
+  Plus,
+  MessageCircleMore,
+} from "lucide-react";
 import Image from "next/image";
 
 export function Navbar() {
   const isAuthenticated = true;
   return (
-    <nav className="mx-auto flex max-w-7xl items-center justify-between gap-10 px-6 py-6">
+    <nav className="mx-auto mb-12 flex max-w-7xl items-center justify-between gap-10 px-6 py-6">
       <span className="text-xl font-semibold">MrktPlace</span>
 
       <div className="relative w-full max-w-[50%] flex-1">
@@ -27,15 +33,19 @@ export function Navbar() {
               Collections
             </Link>
           </li>
-          <li>
-            <Link href="/collections" className="text-sm">
-              Contact
-            </Link>
-          </li>
         </ul>
 
         {isAuthenticated ? (
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4.5">
+            <button title="create listing">
+              <Plus className="size-5" />
+            </button>
+            <button title="notifications" className="relative">
+              <MessageCircleMore className="size-5" />
+              <span className="absolute -top-1.5 -right-1.5 size-3.75 rounded-full bg-green-600 text-[10px] font-semibold text-white">
+                2
+              </span>
+            </button>
             <button title="notifications" className="relative">
               <Bell className="size-5" />
               <span className="absolute -top-1.5 -right-1.5 size-3.75 rounded-full bg-red-600 text-[10px] font-semibold text-white">

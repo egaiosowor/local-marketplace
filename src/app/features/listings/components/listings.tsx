@@ -8,7 +8,7 @@ export function Listings() {
   const { data, error, isLoading, refetch } = useGetListings();
   return (
     <>
-      <main className="mx-auto grid max-w-7xl gap-8 px-6 py-20 sm:[grid-template-columns:repeat(auto-fill,minmax(300px,1fr))]">
+      <main className="mx-auto grid max-w-7xl gap-8 px-6 py-4 sm:[grid-template-columns:repeat(auto-fill,minmax(300px,1fr))]">
         {data?.map((listing) => (
           <ListingCard key={listing.id} listing={listing} />
         ))}
