@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
-import { useGetListingById } from "@/app/features/listings/hooks/use-get-listing";
-import { TryAgain } from "@/app/components/try-again";
+import { useGetListingById } from "@/features/listings/hooks/use-get-listing";
+import { TryAgain } from "@/components/try-again";
 
 export function ListingDetailsScreen() {
   const { id } = useParams();

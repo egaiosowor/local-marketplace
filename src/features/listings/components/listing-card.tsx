@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import { Listing } from "../listing.types";
+import { Listing } from "@/features/listings/listing.types";
 import { MapPin, Dot, Clock, Star, Bookmark, Heart } from "lucide-react";
-import { getTimeAgo } from "@/app/lib/formatters";
+import { getTimeAgo } from "@/lib/formatters";
 import Link from "next/link";
 
 export function ListingCard({ listing }: { listing: Listing }) {

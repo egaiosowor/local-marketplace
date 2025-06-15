@@ -1,8 +1,8 @@
 "use client";
-import { useGetListings } from "../hooks/use-get-listings";
-import { ListingCard } from "./listing-card";
-import { ListingSkeleton } from "./listing-skeleton";
-import { TryAgain } from "@/app/components/try-again";
+import { useGetListings } from "@/features/listings/hooks/use-get-listings";
+import { ListingCard } from "@/features/listings/components/listing-card";
+import { ListingSkeleton } from "@/features/listings/components/listing-skeleton";
+import { TryAgain } from "@/components/try-again";
 
 export function Listings() {
   const { data, error, isLoading, refetch } = useGetListings();

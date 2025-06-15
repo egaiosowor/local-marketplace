@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { listingServices } from "../services/listing-services";
-import { ListingSchema } from "../listing.validation";
+import { listingServices } from "@/features/listings/services/listing-services";
+import { ListingSchema } from "@/features/listings/listing.validation";
 
 export function useGetListingById(id: string) {
   const { data, isLoading, error, refetch } = useQuery({

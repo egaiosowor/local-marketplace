@@ -1,4 +1,4 @@
-import api from "@/app/lib/api";
+import api from "@/lib/api";
 import { Listing } from "../listing.types";
 const BASE_PATH = "/listings";
 
