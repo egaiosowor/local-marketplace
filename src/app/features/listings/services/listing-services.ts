@@ -7,4 +7,9 @@ export const listingServices = {
     const res = await api.get<Listing[]>(`${BASE_PATH}`);
     return res.data;
   },
+
+  async getListingById(id: string): Promise<Listing> {
+    const res = await api.get<Listing>(`${BASE_PATH}/${id}`);
+    return res.data;
+  },
 };
