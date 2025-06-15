@@ -9,8 +9,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const param = await params;
-  const id = await param.id;
+  const { id } = params;
   try {
     const data = await listingServices.getListingById(id);
     const listing = ListingSchema.parse(data);
