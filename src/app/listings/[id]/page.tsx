@@ -5,11 +5,11 @@ import type { Metadata } from "next";
 import { env } from "@/config/env";
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id } = params;
+  const { id } = await params;
   try {
     const data = await listingServices.getListingById(id);
     const listing = ListingSchema.parse(data);
