@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Local Marketplace",
+  title: env.APP_NAME,
   description: "A web app for local listings",
 };
 
