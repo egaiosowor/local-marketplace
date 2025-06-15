@@ -23,7 +23,9 @@ export function Navbar() {
         <button className="cursor-pointer lg:hidden">
           <Menu />
         </button>
-        <span className="text-xl font-semibold">MrktPlace</span>
+        <Link href="/" className="text-xl font-semibold">
+          MrktPlace
+        </Link>
       </div>
 
       {/* Desktop search bar */}
@@ -78,23 +80,29 @@ export function Navbar() {
           {isAuthenticated ? (
             <div className="flex items-center gap-4.5">
               <div className="hidden items-center gap-4.5 lg:flex">
-                <button title="create listing">
+                <button title="create listing" className="cursor-pointer">
                   <Plus className="size-5" />
                 </button>
-                <button title="notifications" className="relative">
+                <button
+                  title="notifications"
+                  className="relative cursor-pointer"
+                >
                   <MessageCircleMore className="size-5" />
                   <span className="absolute -top-1.5 -right-1.5 size-3.75 rounded-full bg-green-600 text-[10px] font-semibold text-white">
                     2
                   </span>
                 </button>
-                <button title="notifications" className="relative">
+                <button
+                  title="notifications"
+                  className="relative cursor-pointer"
+                >
                   <Bell className="size-5" />
                   <span className="absolute -top-1.5 -right-1.5 size-3.75 rounded-full bg-red-600 text-[10px] font-semibold text-white">
                     7
                   </span>
                 </button>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex cursor-pointer items-center gap-1">
                 <Image
                   src="https://avatars.githubusercontent.com/u/98913917?v=4"
                   alt="avatar"
